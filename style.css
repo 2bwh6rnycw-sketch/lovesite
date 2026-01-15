@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    background: url("images/фон.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    background: #eeeeee;
+    padding: 20px;
+    box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    color: #df0000ba;
+    text-align: center;
+}
+
+.sidebar button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background: #d90101db;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: #d30000d1;
+}
+
+.content {
+    margin-left: 260px;
+    padding: 40px;
+    animation: fadeIn 1.2s ease;
+}
+
+.tab.hidden {
+    display: none;
+}
+
+.photo {
+    width: 260px;
+    border-radius: 25px;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #d10000d4;
+}
+
+p {
+    font-size: 18px;
+    color: #444;
+}
+
+/* анимация */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* сердечки */
+.heart {
+    position: fixed;
+    top: -10px;
+    font-size: 50px;       /* размер */
+    opacity: 0.4;         /* прозрачность */
+    color: rgba(222, 0, 0, 0.666);
+    animation: fall 7s linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
